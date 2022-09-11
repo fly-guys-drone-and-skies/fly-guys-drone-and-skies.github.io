@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './Home.css';
 import TimeSheet from './TimeSheet'
 
