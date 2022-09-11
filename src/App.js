@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import TimeSheet from './TimeSheet'
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <p>
           Edit <code>TEST ETSET TESTSETSETS</code> and save to reload.
         </p>
+        <TimeSheet />
         <a
           className="App-link"
           href="https://reactjs.org"
