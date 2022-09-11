@@ -1,27 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
-import TimeSheet from './TimeSheet'
+import { BrowserRouter as Router, Switch, Route, Routes } from "react-router-dom";
+
+import Home from './Home.js';
+import Synopsis from './Synopsis.js';
+import FourUp from './FourUp.js';
+import Team from './Team.js';
+import Time from './Time.js';
+import Navbar from './Nav.js';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>TEST ETSET TESTSETSETS</code> and save to reload.
-        </p>
-        <TimeSheet />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+    <Navbar />
+    <Routes>
+      <Route path='/' exact element={<Home />} />
+      <Route path='/Synopsis' element={<Synopsis /> } />
+      <Route path='/FourUp' element={< FourUp />} />
+      <Route path='/Time' element={< Time/>} />
+      <Route path='/Team' element={< Team/>} />
+    </Routes>
+  </Router>
   );
+
 }
 
 export default App;
